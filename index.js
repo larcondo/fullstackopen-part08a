@@ -68,7 +68,6 @@ const resolvers = {
   Query: {
     personCount: () => persons.length,
     allPersons: (root, args) => {
-      console.log(args.phone === 'YES')
       if (!args.phone) return persons
 
       const byPhone = (person) => 
